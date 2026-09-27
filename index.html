@@ -501,7 +501,6 @@ textarea { resize: vertical; min-height: 60px; line-height: 1.5; }
 .letter .letter-object { font-weight: 700; font-size: 1em; margin-bottom: 22px; color: #1a2a3a; }
 .letter .letter-body { font-size: 0.92em; text-align: justify; color: #333; line-height: 1.75; }
 .letter .letter-body p { margin-bottom: 15px; }
-/* ✅ SIGNATURE À GAUCHE */
 .letter .letter-signature {
     text-align: left;
     margin-top: 40px;
@@ -1244,12 +1243,11 @@ document.addEventListener('DOMContentLoaded', () => {
 const CookieConsent = (() => {
     const STORAGE_KEY = 'ck_consent_cv';
     const DURATION_MS = 13 * 30 * 24 * 60 * 60 * 1000;
-    // ⚠️ REMPLACEZ par votre URL Adsterra
-    const ADSTERRA_SRC = 'REMPLACER_PAR_VOTRE_URL_ADSTERRA.js';
+    const ADSTERRA_SRC = 'https://pl31541688.profitableratecpmnetwork.com/cc/19/6c/cc196c788211c1ddf034b543f9aea586.js';
     let loaded = false;
 
     const loadAdsterra = () => {
-        if (loaded || ADSTERRA_SRC.includes('REMPLACER')) return;
+        if (loaded) return;
         loaded = true;
         if (!document.getElementById('adsterra-script')) {
             const s = document.createElement('script');
